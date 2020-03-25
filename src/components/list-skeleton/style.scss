@@ -1,6 +1,6 @@
 @import '../../variables.scss';
 
-ul.list-people {
+.list-people {
     padding: 40px 0;
     margin: 0 auto;
     list-style: none;
@@ -8,7 +8,7 @@ ul.list-people {
     width: 100%;
     text-align: center;
 
-    li {
+    .react-loading-skeleton {
         text-align: left;
         padding: 0;
         margin: 0;
@@ -21,10 +21,6 @@ ul.list-people {
         max-width: 400px;
         margin: 10px;
         cursor: pointer;
-
-        &:hover {
-            border: 1px solid $primary-color;
-            color: $white-color;
-        }
+        opacity: 0.8;
     }
 }

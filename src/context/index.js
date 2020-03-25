@@ -8,15 +8,17 @@ export default class SwapiProvider extends Component {
     super(props)
 
     this.state = {
-      people: []
+      people: [],
+      isLoading: true
     }
   }
 
   getPeople = (page) => {
+    this.setState({ isLoading: true })
     if(page !== ""){
       fetch(`https://swapi.co/api/people/?page=${page}`)
       .then( response => response.json() )
-      .then( json => this.setState({ people: json.results }))
+      .then( json => this.setState({ people: json.results, isLoading: false }))
     }  
   }
 

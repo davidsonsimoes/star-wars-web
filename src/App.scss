@@ -1,4 +1,44 @@
+@import './variables.scss';
+
 body {
   background: url('./assets/img/bg-content.png');
   background-size: 800px auto;
+  padding-bottom: 50px;
+}
+
+.pagination {
+  color: #ffffff;
+  padding: 0;
+  list-style: none;
+  margin: 0 auto;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    margin: 5px;
+    border: 1px solid $secondary-color;
+    display: inline-block;
+    color: $secondary-color;
+    font-size: 16px;
+    cursor: pointer;
+
+    a {
+      display: block;
+      padding: 4px 8px;
+      outline: none;
+
+      &:hover, &:active, &:focus {
+        outline: none;
+      }
+    }
+
+    &.active {
+      border: 1px solid $primary-color;
+    }
+
+    &:hover {
+      border: 1px solid $white-color;
+      color: $white-color;
+    }
+  }
 }

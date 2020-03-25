@@ -5,7 +5,7 @@ const ListPeople = props => {
   const { itens } = props
   return (
     <>
-      <ul>
+      <ul className="list-people">
         {itens.map((item, i) => (
           <li key={i}>{item.name}</li>
         ))}
