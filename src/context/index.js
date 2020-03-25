@@ -12,8 +12,6 @@ export default class SwapiProvider extends Component {
     }
   }
 
-  // https://swapi.co/api/people/?page=1
-
   getPeople = (page) => {
     if(page !== ""){
       fetch(`https://swapi.co/api/people/?page=${page}`)

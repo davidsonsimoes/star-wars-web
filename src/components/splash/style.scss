@@ -1,5 +1,4 @@
-$breakpoint-tablet: 768px;
-$primary-color: #000000;
+@import '../../variables.scss';
 
 .splash-container {
   position: fixed;
@@ -7,7 +6,7 @@ $primary-color: #000000;
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: $primary-color;
+  background-color: $default-color;
 
   .splash-image {
     display: block;

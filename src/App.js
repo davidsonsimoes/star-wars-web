@@ -1,8 +1,8 @@
 import React, {useContext, useEffect} from 'react'
 import Splash from './components/splash';
 import Home from './screens/home';
-
 import { SwapiContext } from './context';
+import './App.scss';
 
 const App = () => {
 
@@ -16,9 +16,9 @@ const App = () => {
   }, [1])
 
   return (
-    <>
+    <div className="App">
       { (people.length > 0) ? <Home /> : <Splash /> }
-    </>
+    </div>
   );
 }
 
