@@ -8,13 +8,13 @@ import ListSkeleton from '../../components/list-skeleton';
 const Home = () => {
   const { 
       state: { people, isLoading },
-      action: { getPeople }
+      action: { getPeople, getAsyncContent }
     } = useContext(SwapiContext)
 
   return (
     <>
       <Header />
-      {isLoading ? <ListSkeleton itens={10} /> : <ListPeople itens={people} />}
+      {isLoading ? <ListSkeleton itens={10} /> : <ListPeople itens={people} getAsyncContent={getAsyncContent} />}
       <ReactPaginate
         previousLabel={'anterior'}
         nextLabel={'próximo'}

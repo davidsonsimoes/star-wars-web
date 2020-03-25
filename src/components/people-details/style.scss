@@ -1,0 +1,50 @@
+@import '../../variables.scss';
+
+.content-people {
+  padding: 40px;
+  margin: 40px auto;
+  list-style: none;
+  max-width: 800px;
+  width: 100%;
+  text-align: left;
+  color: $secondary-color;
+  background-color: $default-color;
+  border: 1px solid $secondary-color;
+
+  @media (max-width: $breakpoint-tablet) {
+    max-width: 350px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: 0
+  }
+
+  h1 {
+    padding: 0 0 0 20px;
+    margin: 0 0 20px 0;
+    border-left: 5px solid $white-color;
+  }
+
+  .row {
+    flex-wrap: wrap;
+    display: flex;
+    text-align: center;
+
+    .col {
+      text-align: left;
+      max-width: 350px;
+      width: 100%;
+      margin: 20px;
+
+      @media (max-width: $breakpoint-tablet) {
+        max-width: 100%;
+        margin: 15px 0;
+      }
+    }
+  }
+
+  h2 {
+    border-bottom: 1px solid $white-color;
+    font-size: 22px;
+    padding-bottom: 5px;
+  }
+}

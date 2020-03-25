@@ -22,6 +22,35 @@ ul.list-people {
         margin: 10px;
         cursor: pointer;
 
+        @media (max-width: $breakpoint-tablet) {
+            max-width: 300px;
+        }
+
+        .align-right {
+            float: right;
+
+            .content-icon {
+                display: inline-block;
+                margin: 0 10px;
+                position: relative;
+
+                .qtd {
+                    background-color: $primary-color;
+                    display: block;
+                    width: 16px;
+                    line-height: 16px;
+                    height: 16px;
+                    border-radius: 100%;
+                    color: $white-color;
+                    position: absolute;
+                    top: -9px;
+                    right: 8px;
+                    text-align: center;
+                    font-size: 11px;
+                }
+            }
+        }
+
         &:hover {
             border: 1px solid $primary-color;
             color: $white-color;

@@ -9,12 +9,25 @@ export default class SwapiProvider extends Component {
 
     this.state = {
       people: [],
-      isLoading: true
+      isLoading: true,
+      starships: [],
+      isLoadingstarships: true,
+      films: [],
+      isLoadingfilms: true,
+      species: [],
+      isLoadingspecies: true
     }
   }
 
   getPeople = (page) => {
-    this.setState({ isLoading: true })
+    this.setState({ 
+      isLoading: true,
+      starships: [],
+      isLoadingstarships: true,
+      films: [],
+      isLoadingfilms: true,
+      species: [],
+      isLoadingspecies: true })
     if(page !== ""){
       fetch(`https://swapi.co/api/people/?page=${page}`)
       .then( response => response.json() )
@@ -22,11 +35,33 @@ export default class SwapiProvider extends Component {
     }  
   }
 
+
+  getUrl = async (url) => {
+    const response = await fetch(url);
+    const json = await response.json();
+    return json
+  }
+
+  getAsyncContent = async (name, urls) => {
+    let allItens = [];
+    await Promise.all(
+      urls.map(async user => {
+        const userId = await this.getUrl(user)
+        allItens.push(userId)
+      })
+    )
+    this.setState({
+      [name]: allItens,
+      [`isLoading${name}`]: false
+    });
+  }
+
   render() {
     const value = {
       state: { ...this.state },
       action: {
-        getPeople: this.getPeople
+        getPeople: this.getPeople,
+        getAsyncContent: this.getAsyncContent
       }
     };
   

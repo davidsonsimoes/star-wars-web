@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import './index.css';
 import App from './App';
+import PeopleDetails from './screens/people-details';
 import * as serviceWorker from './serviceWorker';
 import SwapiProvider from './context';
 
@@ -11,6 +12,7 @@ ReactDOM.render(
     <Switch>
       <SwapiProvider>
         <Route path="/" exact={true} component={App} />
+        <Route path="/people/:id" component={PeopleDetails} />
       </SwapiProvider>
     </Switch>
   </ BrowserRouter>,
