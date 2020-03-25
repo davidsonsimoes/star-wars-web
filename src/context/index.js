@@ -16,9 +16,7 @@ export default class SwapiProvider extends Component {
     if(page !== ""){
       fetch(`https://swapi.co/api/people/?page=${page}`)
       .then( response => response.json() )
-      .then( json => this.setState({ people: json.results }, ( ) => {
-        console.log("Result: ", this.state.people)
-        }))
+      .then( json => this.setState({ people: json.results }))
     }  
   }
 

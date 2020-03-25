@@ -1,0 +1,29 @@
+@import '../../variables.scss';
+
+ul {
+    padding: 40px 0;
+    margin: 0 auto;
+    list-style: none;
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+
+    li {
+        text-align: left;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        border: 1px solid $secondary-color;
+        display: inline-block;
+        color: $secondary-color;
+        padding: 20px;
+        width: 100%;
+        max-width: 400px;
+        margin: 10px;
+        cursor: pointer;
+
+        &:hover {
+            border: 1px solid $primary-color;
+        }
+    }
+}

@@ -5,7 +5,6 @@ import { SwapiContext } from './context';
 import './App.scss';
 
 const App = () => {
-
   const { 
     state: { people },
     action: { getPeople }
