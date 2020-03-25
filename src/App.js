@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useContext, useEffect} from 'react'
+import Splash from './components/splash';
+import Home from './screens/home';
 
-function App() {
+import { SwapiContext } from './context';
+
+const App = () => {
+
+  const { 
+    state: { people },
+    action: { getPeople }
+  } = useContext(SwapiContext)
+
+  useEffect(() => {
+    getPeople(1)
+  }, [1])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      { (people.length > 0) ? <Home /> : <Splash /> }
+    </>
   );
 }
 
-export default App;
+export default App

@@ -1,0 +1,32 @@
+$breakpoint-tablet: 768px;
+$primary-color: #000000;
+
+.splash-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: $primary-color;
+
+  .splash-image {
+    display: block;
+    width: 100%;
+
+    @media (max-width: $breakpoint-tablet) {
+      width: 200%;
+      margin-left: -48%;
+    }
+  }
+  .splash-loading {
+    position: absolute;
+    width: 50px;
+    bottom: 10%;
+    left: 48.6%;
+    margin-left: -25px;
+
+    @media (max-width: $breakpoint-tablet) {
+      bottom: 25%;
+    }
+  }
+}
