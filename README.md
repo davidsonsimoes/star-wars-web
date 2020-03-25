@@ -8,8 +8,12 @@ Projeto criado com [Create React App](https://github.com/facebook/create-react-a
 
 Para rodar o projeto basta rodar os comandos:
 
-### `git clone git@github.com:davidsonsimoes/star-wars-web.git`
-### `cd star-wars-web`
-### `npm i`
-### `npm start`
 
+ `git clone git@github.com:davidsonsimoes/star-wars-web.git`
+
+ `cd star-wars-web`
+ 
+ `npm i`
+  
+ `npm start`
+ 
